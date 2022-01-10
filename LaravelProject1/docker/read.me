@@ -1,0 +1,30 @@
+start project
+    docker-compose up
+    docker-compose up --build
+stop project
+    docker-compose stop
+    docker-compose down
+kill project
+    docker-compose kill
+    docker-compose down --rm=all
+
+web
+    http://localhost:8088
+
+mysql:
+    login root
+    pass cbece_gead-cebfa
+  
+docker bash:
+    docker exec -it coin_keeper_php /bin/bash
+
+Run test
+    docker exec -it coin_keeper_php phpunit
+    docker exec -it coin_keeper_php phpunit --coverage-html ./coverage
+
+Problem private
+    sudo chown -R $USER server
+
+
+    php artisan make:migration create_categories_has_articles_table --create=categories_has_articles
+    php artisan migrate
